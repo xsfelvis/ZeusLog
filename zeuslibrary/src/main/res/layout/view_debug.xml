@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llZeusContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_transparent_black"
+    android:orientation="vertical"
+    tools:parentTag="LinearLayout">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvActName"
+            android:textSize="10dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Switch
+            android:id="@+id/btnSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="12dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <xsf.zeuslibrary.zeusMobile.ScrollViewSV
+            android:id="@+id/svContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/tvShowInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日志显示 \n"
+                android:textSize="12dp"/>
+        </xsf.zeuslibrary.zeusMobile.ScrollViewSV>
+
+        <xsf.zeuslibrary.zeusMobile.SideDragBar
+            android:id="@+id/sideDragBar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+</LinearLayout>
