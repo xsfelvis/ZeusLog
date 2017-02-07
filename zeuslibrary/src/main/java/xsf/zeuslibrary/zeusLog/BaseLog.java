@@ -30,23 +30,18 @@ public class BaseLog {
     private static void printSub(int type, String tag, String sub) {
         switch (type){
             case ZeusLog.V:
-                //明细(最低优先级)
                 Log.v(tag,sub);
                 break;
             case ZeusLog.D:
-                //调试
                 Log.d(tag,sub);
                 break;
             case ZeusLog.I:
-                //信息
                 Log.i(tag,sub);
                 break;
             case ZeusLog.W:
-                //警告
                 Log.w(tag,sub);
                 break;
             case ZeusLog.E:
-                //错误
                 Log.e(tag,sub);
                 break;
             case ZeusLog.A:
