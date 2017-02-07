@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'//添加
 
 android {
     compileSdkVersion 25
@@ -29,42 +30,16 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-version = "1.0.0"
-def siteUrl = 'https://github.com/ZhaoKaiQiang/KLog'
-def gitUrl = 'https://github.com/ZhaoKaiQiang/KLog.git'
-group = "com.github.zhaokaiqiang.klog"
-
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-artifacts {
-    archives javadocJar
-    archives sourcesJar
+//添加
+publish {
+    userOrg = 'androidxsf'//bintray.com用户名
+    groupId = 'com.xsf'//jcenter上的路径
+    artifactId = 'zeusLog'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'this is a optimization log liabrary which inlcued console and phone'//描述，不重要
+    website = 'http://blog.csdn.net/xsf50717/article/details/54238044'//网站，最好有，不重要
 }
 
-//create jar
-task clearJar(type: Delete) {
-    delete '../klog.jar'
-}
 
-task makeJar(type: Copy) {
-    from('build/intermediates/bundles/release/')
-    into('../')
-    include('classes.jar')
-    rename ('classes.jar', 'klog.jar')
-}
 
-makeJar.dependsOn(clearJar, build)
-
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
