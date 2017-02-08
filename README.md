@@ -62,7 +62,7 @@
 
 # 0x02 How to Use
 
-引入这个库 或者aar
+`compile 'com.xsf:zeusLog:1.0.0'`
 
 > 移动端Log使用很简单，需要在你想打印的地方，调用如下API即可
 
