@@ -1,3 +1,6 @@
+[![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Download](https://api.bintray.com/packages/tangsiyuan/maven/myokhttp/images/download.svg) ](https://dl.bintray.com/androidxsf/maven/com/xsf/zeusLog)
+
 # 0x00 解决问题
 
 1. 新人刚到项目组，往往搞不清每个页面对应的Activity名称，导致完成需要一些时间浪费在找页面上
